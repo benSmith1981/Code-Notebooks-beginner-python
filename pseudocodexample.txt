@@ -1,0 +1,40 @@
+OUTPUT "Enter a  number to check if it is even or odd"
+INPUT number 
+IF number MODULUS 2 == 0 THEN
+    OUTPUT number + " is even"
+ELSE
+    OUPUT number + " is odd"
+ENDIF
+
+
+
+REPEAT
+    OUTPUT "Enter your name"
+    INPUT name
+    IF name is NOT a String THEN
+        OUTPUT "You must enter a string"
+    ENDIF
+UNTIL name is a String
+
+
+
+
+
+
+
+
+FUNCTION AddUpArray(theArray)
+    SET total TO 0
+    FOR index FROM 0 to 4 DO
+        //Add the curren element in theArray at index to the current total
+        SET total TO theArray[index] + total
+    ENDFOR
+    RETURN total
+ENDFUNCTION
+
+SET numbersToAdd TO [5,10,5,2,1]
+OUTPUT "The array summed " + AddUpArray(numbersToAdd)
+
+
+
+
